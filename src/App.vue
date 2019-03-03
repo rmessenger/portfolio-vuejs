@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="w-100 tc pa4 gray">
+    <h2>Test header</h2>
+    <h3 v-if="loading">Loading...</h3>
+    <p v-for="post in posts" :key="`post-${post._id}`">{{post.title}}</p>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  name: "app",
+  data: () => ({
+    loading: false,
+    posts: []
+  }),
+  created() {
+    this.loading = true;
+    this.getPosts()
+      .then(posts => (this.posts = posts))
+      .catch(error => window.alert(error))
+      .then(() => (this.loading = false));
+  },
+  methods: {
+    getPosts() {
+      return this.$sanity.fetch(`
+        *[_type == "post"]{
+          _id,
+          title,
+          author,
+          mainImage,
+          categories
+        }
+      `);
+    }
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
