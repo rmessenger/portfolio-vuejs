@@ -22,15 +22,7 @@ export default {
   },
   methods: {
     getPosts() {
-      return this.$sanity.fetch(`
-        *[_type == "post"]{
-          _id,
-          title,
-          author,
-          mainImage,
-          categories
-        }
-      `);
+      return this.$sanity.fetch(`*[_type == "post"]`);
     }
   }
 };
