@@ -4,16 +4,16 @@
       class="fl w-100 w-30-l pa4 cf tr-l flex items-center flex-column flex-row-ns flex-column-l"
     >
       <!-- LOGO -->
-      <div class="f2 f3-m bungee pb4-l w-100 bb pb2 pb0-ns bw0-ns">BOLD<br/>SIMPLICITY</div>
+      <div class="f2 bungee pb3-l w-100 bb pb2 pb0-m bw0-m">BOLD<br/>SIMPLICITY</div>
 
       <!-- MENU -->
       <div
-        class="f4 f3-l b tr flex-grow-1 mt2 mt0-ns flex justify-between w-100 db-ns flex-wrap"
+        class="f4 f3-l b tr flex-grow-1 mt2 mt0-m flex justify-between w-100 db-ns flex-wrap"
       >
         <a
           v-for="page in $options.pages"
           :key="`page-${page.name}`"
-          class="pv1 di pointer w-100-l br4-l mv2-l mh0-l ml3-ns dib"
+          class="pv1 di pointer w-100-l br4-l mv1-l mh0-l ml3-ns dib"
           :class="{[page.color]: page==activePage}"
           @click="activePage=page"
         >{{page.name}}
