@@ -14,7 +14,7 @@
           v-for="page in $options.pages"
           :key="`page-${page.name}`"
           class="pv1 di pointer w-100-l br4-l mv1-l mh0-l ml3-ns dib"
-          :class="{[page.color]: page==activePage}"
+          :class="{[page.color]: page===activePage}"
           @click="activePage=page"
         >{{page.name}}
           <i :class="page.icon" class="w2 tc"></i>
@@ -37,37 +37,37 @@
 
 <script>
 export default {
-  name: "app",
+  name: 'app',
   pages: [
     {
-      name: "About Me",
-      icon: "fas fa-user-circle",
-      color: "gold",
+      name: 'About Me',
+      icon: 'fas fa-user-circle',
+      color: 'gold',
     },
     {
-      name: "Posts",
-      icon: "fas fa-brain",
-      color: "red",
+      name: 'Posts',
+      icon: 'fas fa-brain',
+      color: 'red',
     },
     {
-      name: "VueJS",
-      icon: "fab fa-vuejs",
-      color: "green",
+      name: 'VueJS',
+      icon: 'fab fa-vuejs',
+      color: 'green',
     },
     {
-      name: "JavaScript",
-      icon: "fab fa-js-square",
-      color: "yellow",
+      name: 'JavaScript',
+      icon: 'fab fa-js-square',
+      color: 'yellow',
     },
     {
-      name: "Java",
-      icon: "fab fa-java",
-      color: "blue",
+      name: 'Java',
+      icon: 'fab fa-java',
+      color: 'blue',
     },
     {
-      name: "Resume",
-      icon: "fas fa-address-card",
-      color: "purple",
+      name: 'Resume',
+      icon: 'fas fa-address-card',
+      color: 'purple',
     }
   ],
   data: () => ({
