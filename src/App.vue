@@ -1,29 +1,26 @@
 <template>
   <div class="cf poiret-one">
-    <div
-      class="fl w-100 w-30-l pa4 cf tr-l flex items-center flex-column flex-row-ns flex-column-l"
-    >
+    <div class="fl w-100 w-30-l pa4 cf tr-l flex items-center flex-column flex-row-ns flex-column-l">
       <!-- LOGO -->
-      <div class="f2 bungee pb3-l w-100 bb pb2 pb0-m bw0-m">BOLD<br/>SIMPLICITY</div>
+      <div class="f2 bungee pb3-l w-100 bb pb2 pb0-m bw0-m">Robin<br/>Messenger</div>
 
       <!-- MENU -->
-      <div
-        class="f4 f3-l b tr flex-grow-1 mt2 mt0-m flex justify-between w-100 db-ns flex-wrap"
-      >
+      <div class="f4 f3-l b tr flex-grow-1 mt2 mt0-m flex justify-between w-100 db-ns flex-wrap">
         <a
           v-for="page in $options.pages"
           :key="`page-${page.name}`"
           class="pv1 di pointer w-100-l br4-l mv1-l mh0-l ml3-ns dib"
-          :class="{[page.color]: page===activePage}"
+          :class="{[page.color]: page===activePage, 'faa-flash animated': page===activePage && loading}"
           @click="activePage=page"
-        >{{page.name}}
-          <i :class="page.icon" class="w2 tc"></i>
+        >
+          {{page.name}}
+          <i :class="page.icon + (page===activePage && loading ? '' : '')" class="w2 tc"></i>
         </a>
       </div>
     </div>
-    <div
-      class="fl w-100 w-70-l pa4 pt0 pt4-l mw7-l"
-    >
+
+    <!-- CONTENT -->
+    <div class="fl w-100 w-70-l pa4 pt0 pt4-l mw7-l relative">
       <h1 class="mt0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic molestiae aliquid dolores dicta ex, totam ad commodi voluptatibus fugiat quis magni saepe rerum atque quam. Laudantium earum doloremque quisquam maiores provident, minima non! Necessitatibus minima error tempora totam quae, nobis fuga sunt iusto neque tenetur, quis similique explicabo consequuntur voluptatem dolores sed dolorum, beatae culpa. Molestiae qui, repudiandae eaque vero nesciunt id natus possimus praesentium odio soluta saepe earum enim harum esse facere optio dolore iusto nam animi. Veniam, qui quisquam! Optio exercitationem quia sed maiores amet, labore nisi repellat eius aliquam accusantium suscipit animi est fugit. Illo, quod magnam!</p>
       <h1 class="mt0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, laboriosam.</h1>
