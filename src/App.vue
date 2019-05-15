@@ -2,11 +2,14 @@
   <div class="cf poiret-one">
     <div class="fl w-100 w-30-l pa4 cf tr-l flex items-center flex-column flex-row-ns flex-column-l">
       <!-- LOGO -->
-      <div class="pb3-l w-100 bb pb2 pb0-m bw0-m">
+      <div class="w-100 bb pb3 pb0-m bw0-m">
         <span class="f2 bungee">BOLD<br/>SIMPLICITY</span>
-        <div class="pt2">
-          <div>Portfolio by Robin Messenger</div>
-          <div class="mt2"><i class="fr ml2 fas fa-hammer"></i> Under construction</div>
+        <div class="pt2">Portfolio by Robin Messenger</div>
+        <div class="pt3">
+          <span class="pv1 ph2 bg-orange white br4 b">
+            <i class="fas fa-hammer"></i>
+            Under construction
+          </span>
         </div>
       </div>
 
