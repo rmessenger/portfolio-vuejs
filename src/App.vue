@@ -2,7 +2,13 @@
   <div class="cf poiret-one">
     <div class="fl w-100 w-30-l pa4 cf tr-l flex items-center flex-column flex-row-ns flex-column-l">
       <!-- LOGO -->
-      <div class="f2 bungee pb3-l w-100 bb pb2 pb0-m bw0-m">Robin<br/>Messenger</div>
+      <div class="pb3-l w-100 bb pb2 pb0-m bw0-m">
+        <span class="f2 bungee">BOLD<br/>SIMPLICITY</span>
+        <div class="pt2">
+          <div>Portfolio by Robin Messenger</div>
+          <div class="mt2"><i class="fr ml2 fas fa-hammer"></i> Under construction</div>
+        </div>
+      </div>
 
       <!-- MENU -->
       <div class="f4 f3-l b tr flex-grow-1 mt2 mt0-m flex justify-between w-100 db-ns flex-wrap">
