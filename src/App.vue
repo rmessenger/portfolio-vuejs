@@ -6,10 +6,14 @@
         <span class="f2 bungee">BOLD<br/>SIMPLICITY</span>
         <div class="pt2">Portfolio by Robin Messenger</div>
         <div class="pt3">
-          <span class="pv1 ph2 bg-orange white br4 b">
+          <a 
+            target="_blank"
+            href="https://github.com/rmessenger/portfolio-vuejs"
+            class="pv1 ph2 bg-orange white br4 b no-underline dim"
+          >
             <i class="fas fa-hammer"></i>
             Under construction
-          </span>
+          </a>
         </div>
       </div>
 
